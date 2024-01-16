@@ -10,11 +10,11 @@ import CoreData
 
 class TaskModel: ObservableObject {
     
-    var CoreData = CoreDataManager.shared
+    var coreData = CoreDataManager.shared
     @Published var tasks = [Task]()
     
     func getEntities(){
-        tasks = CoreData.allEntities()
+        tasks = coreData.allEntities()
     }
     init(){
         getEntities()

@@ -10,6 +10,7 @@ import SwiftUI
 struct TaskView: View {
     
     var task: Task
+    @State var isDone = false
     
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -47,10 +48,17 @@ struct TaskView: View {
                 
                 Button {
                     //done -> green checkmark
+                    isDone.toggle()
                 } label: {
-                    Image(systemName: "circle")
-                        .foregroundStyle(.customPurple)
-                        .font(.title3)
+                    if isDone == true {
+                        Image(systemName: "checkmark.circle")
+                            .font(.title3)
+                            .foregroundStyle(.green)
+                    } else {
+                        Image(systemName: "circle")
+                            .foregroundStyle(.customPurple)
+                            .font(.title3)
+                    }
                 }
                 
             } .padding()
@@ -60,7 +68,8 @@ struct TaskView: View {
                     .frame(width: 360)
                     .foregroundStyle(.customPurple.opacity(0.1))
                     .shadow(radius: 7)
-                )
+                ).padding(.bottom, 15)
+
     }
 }
 

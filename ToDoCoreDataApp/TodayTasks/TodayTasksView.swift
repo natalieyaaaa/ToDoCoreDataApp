@@ -11,13 +11,17 @@ struct TodayTasksView: View {
     
     @EnvironmentObject var tm: TaskModel
     
-    var task = [Task]()
-    
     var body: some View {
         NavigationView {
             ScrollView {
                 
-                ForEach(<#_#>)
+                Text("Today's Tasks")
+                    .font(.lexenddeca(.bold, size: 25))
+                    .foregroundStyle(.customBlack)
+                
+                ForEach(tm.tasks, id: \.self) { task in
+                    TaskView(task: task)
+                }
                 
             } .background(
                 CustomBackground().ignoresSafeArea())
