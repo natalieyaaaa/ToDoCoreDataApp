@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+        
+    let all = CoreDataManager.shared.allEntities()
+
     var body: some View {
-        AddView()
+        
+        if all.isEmpty {
+            
+        } else {
+            AddView()
+        }
     }
 }
 

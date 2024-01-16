@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddViewBackground: View {
+struct CustomBackground: View {
     var body: some View {
         ZStack {
             Circle()
@@ -34,7 +34,7 @@ struct AddViewBackground: View {
 }
 
 #Preview {
-    AddViewBackground()
+    CustomBackground()
 }
 
 extension Shape {

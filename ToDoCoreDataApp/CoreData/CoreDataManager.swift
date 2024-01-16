@@ -32,18 +32,18 @@ class CoreDataManager: ObservableObject {
     }
     
     // edit the function according to your entity attributes
-    func saveEntity(name: String, notes: String, dueDate: Date) {
+    func saveEntity(name: String, notes: String, dueDate: Date, startDate: Date) {
         let entity = Task(context: persistentContainer.viewContext)
         entity.name = name
         entity.notes = notes
         entity.dueDate = dueDate
+        entity.startDate = startDate
         
         updateEntity()
     }
         
         func deleteEntity(entity: Task) {
             persistentContainer.viewContext.delete(entity)
-            
             updateEntity()
         }
         
@@ -57,4 +57,21 @@ class CoreDataManager: ObservableObject {
             }
         }
     }
+
+// for previews
+extension Task {
+    
+    static var example: Task {
+        
+        // Get the first PlanPoint from the in-memory Core Data store
+        let context = CoreDataManager.shared.persistentContainer.viewContext
+        
+        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+        fetchRequest.fetchLimit = 1
+        
+        let results = try? context.fetch(fetchRequest)
+        
+        return (results?.first!)!
+    }
+}
 

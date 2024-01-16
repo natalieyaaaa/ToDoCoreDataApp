@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2031BEB52B55D963008F668E /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031BEB42B55D963008F668E /* TaskModel.swift */; };
+		2031BEB72B56E390008F668E /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031BEB62B56E390008F668E /* TaskView.swift */; };
 		204AEA922B51BEC000AD0059 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204AEA912B51BEC000AD0059 /* FontManager.swift */; };
 		204AEA9D2B51C5F700AD0059 /* LexendDeca-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204AEA942B51C5F700AD0059 /* LexendDeca-Medium.ttf */; };
 		204AEA9E2B51C5F700AD0059 /* LexendDeca-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204AEA952B51C5F700AD0059 /* LexendDeca-Black.ttf */; };
@@ -17,8 +19,13 @@
 		204AEAA32B51C5F700AD0059 /* LexendDeca-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204AEA9A2B51C5F700AD0059 /* LexendDeca-Regular.ttf */; };
 		204AEAA42B51C5F700AD0059 /* LexendDeca-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204AEA9B2B51C5F700AD0059 /* LexendDeca-Light.ttf */; };
 		204AEAA52B51C5F700AD0059 /* LexendDeca-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204AEA9C2B51C5F700AD0059 /* LexendDeca-SemiBold.ttf */; };
-		204AEAA82B51D09800AD0059 /* AddViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204AEAA72B51D09800AD0059 /* AddViewBackground.swift */; };
+		204AEAA82B51D09800AD0059 /* CustomBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204AEAA72B51D09800AD0059 /* CustomBackground.swift */; };
 		204AEAAB2B51E40C00AD0059 /* CustomAddTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204AEAAA2B51E40C00AD0059 /* CustomAddTextField.swift */; };
+		204AEAAD2B52AE0000AD0059 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204AEAAC2B52AE0000AD0059 /* CustomDatePicker.swift */; };
+		204AEAAF2B52D31900AD0059 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204AEAAE2B52D31900AD0059 /* CustomButton.swift */; };
+		204AEAB12B52D68B00AD0059 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204AEAB02B52D68B00AD0059 /* AddViewModel.swift */; };
+		204AEAB42B52EB5D00AD0059 /* TodayTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204AEAB32B52EB5D00AD0059 /* TodayTasksView.swift */; };
+		204AEAB72B52EE3D00AD0059 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204AEAB62B52EE3D00AD0059 /* StartView.swift */; };
 		2060A7A02B518AC1000434E3 /* ToDoCoreDataAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2060A79F2B518AC1000434E3 /* ToDoCoreDataAppApp.swift */; };
 		2060A7A22B518AC1000434E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2060A7A12B518AC1000434E3 /* ContentView.swift */; };
 		2060A7A42B518AC3000434E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2060A7A32B518AC3000434E3 /* Assets.xcassets */; };
@@ -29,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2031BEB42B55D963008F668E /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		2031BEB62B56E390008F668E /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		204AEA912B51BEC000AD0059 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		204AEA942B51C5F700AD0059 /* LexendDeca-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Medium.ttf"; sourceTree = "<group>"; };
 		204AEA952B51C5F700AD0059 /* LexendDeca-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Black.ttf"; sourceTree = "<group>"; };
@@ -40,8 +49,13 @@
 		204AEA9B2B51C5F700AD0059 /* LexendDeca-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Light.ttf"; sourceTree = "<group>"; };
 		204AEA9C2B51C5F700AD0059 /* LexendDeca-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-SemiBold.ttf"; sourceTree = "<group>"; };
 		204AEAA62B51C63600AD0059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		204AEAA72B51D09800AD0059 /* AddViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewBackground.swift; sourceTree = "<group>"; };
+		204AEAA72B51D09800AD0059 /* CustomBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackground.swift; sourceTree = "<group>"; };
 		204AEAAA2B51E40C00AD0059 /* CustomAddTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAddTextField.swift; sourceTree = "<group>"; };
+		204AEAAC2B52AE0000AD0059 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		204AEAAE2B52D31900AD0059 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		204AEAB02B52D68B00AD0059 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		204AEAB32B52EB5D00AD0059 /* TodayTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTasksView.swift; sourceTree = "<group>"; };
+		204AEAB62B52EE3D00AD0059 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		2060A79C2B518AC1000434E3 /* ToDoCoreDataApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoCoreDataApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2060A79F2B518AC1000434E3 /* ToDoCoreDataAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCoreDataAppApp.swift; sourceTree = "<group>"; };
 		2060A7A12B518AC1000434E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +80,7 @@
 		204AEA902B51BE9500AD0059 /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				204AEAA72B51D09800AD0059 /* CustomBackground.swift */,
 				204AEA932B51C5D100AD0059 /* Fonts */,
 			);
 			path = Design;
@@ -91,10 +106,28 @@
 		204AEAA92B51E3B300AD0059 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				204AEAA72B51D09800AD0059 /* AddViewBackground.swift */,
 				204AEAAA2B51E40C00AD0059 /* CustomAddTextField.swift */,
+				204AEAAC2B52AE0000AD0059 /* CustomDatePicker.swift */,
+				204AEAAE2B52D31900AD0059 /* CustomButton.swift */,
 			);
 			path = Elements;
+			sourceTree = "<group>";
+		};
+		204AEAB22B52EB2B00AD0059 /* TodayTasks */ = {
+			isa = PBXGroup;
+			children = (
+				204AEAB32B52EB5D00AD0059 /* TodayTasksView.swift */,
+				2031BEB62B56E390008F668E /* TaskView.swift */,
+			);
+			path = TodayTasks;
+			sourceTree = "<group>";
+		};
+		204AEAB52B52EE2C00AD0059 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				204AEAB62B52EE3D00AD0059 /* StartView.swift */,
+			);
+			path = Start;
 			sourceTree = "<group>";
 		};
 		2060A7932B518AC1000434E3 = {
@@ -116,12 +149,14 @@
 		2060A79E2B518AC1000434E3 /* ToDoCoreDataApp */ = {
 			isa = PBXGroup;
 			children = (
+				204AEAB52B52EE2C00AD0059 /* Start */,
+				204AEAB22B52EB2B00AD0059 /* TodayTasks */,
+				2060A7A12B518AC1000434E3 /* ContentView.swift */,
 				204AEAA62B51C63600AD0059 /* Info.plist */,
 				204AEA902B51BE9500AD0059 /* Design */,
 				2060A7AE2B518C33000434E3 /* AddScreen */,
 				2060A7AD2B518C26000434E3 /* CoreData */,
 				2060A79F2B518AC1000434E3 /* ToDoCoreDataAppApp.swift */,
-				2060A7A12B518AC1000434E3 /* ContentView.swift */,
 				2060A7A32B518AC3000434E3 /* Assets.xcassets */,
 				2060A7A52B518AC3000434E3 /* Preview Content */,
 			);
@@ -141,6 +176,7 @@
 			children = (
 				2060A7AF2B518C79000434E3 /* Tasks.xcdatamodeld */,
 				2060A7B22B518CD3000434E3 /* CoreDataManager.swift */,
+				2031BEB42B55D963008F668E /* TaskModel.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -149,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				2060A7B42B518FC8000434E3 /* AddView.swift */,
+				204AEAB02B52D68B00AD0059 /* AddViewModel.swift */,
 				204AEAA92B51E3B300AD0059 /* Elements */,
 			);
 			path = AddScreen;
@@ -233,14 +270,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				204AEAB12B52D68B00AD0059 /* AddViewModel.swift in Sources */,
 				204AEAAB2B51E40C00AD0059 /* CustomAddTextField.swift in Sources */,
 				2060A7B12B518C79000434E3 /* Tasks.xcdatamodeld in Sources */,
-				204AEAA82B51D09800AD0059 /* AddViewBackground.swift in Sources */,
+				2031BEB72B56E390008F668E /* TaskView.swift in Sources */,
+				204AEAA82B51D09800AD0059 /* CustomBackground.swift in Sources */,
 				2060A7A22B518AC1000434E3 /* ContentView.swift in Sources */,
+				204AEAB72B52EE3D00AD0059 /* StartView.swift in Sources */,
+				2031BEB52B55D963008F668E /* TaskModel.swift in Sources */,
+				204AEAAF2B52D31900AD0059 /* CustomButton.swift in Sources */,
 				204AEA922B51BEC000AD0059 /* FontManager.swift in Sources */,
 				2060A7B52B518FC8000434E3 /* AddView.swift in Sources */,
 				2060A7B32B518CD3000434E3 /* CoreDataManager.swift in Sources */,
 				2060A7A02B518AC1000434E3 /* ToDoCoreDataAppApp.swift in Sources */,
+				204AEAAD2B52AE0000AD0059 /* CustomDatePicker.swift in Sources */,
+				204AEAB42B52EB5D00AD0059 /* TodayTasksView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
