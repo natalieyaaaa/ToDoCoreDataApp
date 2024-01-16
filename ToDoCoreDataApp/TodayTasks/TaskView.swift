@@ -17,23 +17,50 @@ struct TaskView: View {
         return formatter}()
     
         var body: some View {
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(task.name!)
-                        .font(.lexenddeca(.semiBold, size: 16))
-                        .foregroundStyle(.customBlack)
+            HStack {
+                VStack(alignment: .leading) {
+                    HStack {
+                        
+                        Image(systemName: "list.bullet.clipboard")
+                            .foregroundStyle(.customBlack)
+                        Text(task.name!)
+                            .font(.lexenddeca(.semiBold, size: 16))
+                            .foregroundStyle(.customBlack)
+                        
+                    }.padding(.bottom)
                     
-                    Spacer()
-                    
+                    HStack {
+                        Text("Due date:")
+                            .font(.lexenddeca(.light, size: 13))
+                            .foregroundStyle(.greySecondary)
+                        
+                        Text(dateFormatter.string(from: task.dueDate!))
+                            .font(.lexenddeca(.light, size: 13))
+                            .foregroundStyle(.customBlack)
+                            .padding(10)
+                            .background(RoundedRectangle(cornerRadius: 15)
+                                .foregroundStyle(.customPurple.opacity(0.2)))
+                    }
+                }
+                
+                Spacer()
+                
+                Button {
+                    //done -> green checkmark
+                } label: {
                     Image(systemName: "circle")
                         .foregroundStyle(.customPurple)
-                }.padding(.bottom)
+                        .font(.title3)
+                }
                 
-                Text("Due date: \(dateFormatter.string(from: task.dueDate!))")
-                    .font(.lexenddeca(.light, size: 13))
-                    .foregroundStyle(.greySecondary)
             } .padding()
-                .background(RoundedRectangle(cornerRadius: 15))
+                .frame(width: 350)
+                .frame(maxWidth: 600)
+                .background(RoundedRectangle(cornerRadius: 20)
+                    .frame(width: 360)
+                    .foregroundStyle(.customPurple.opacity(0.1))
+                    .shadow(radius: 7)
+                )
     }
 }
 

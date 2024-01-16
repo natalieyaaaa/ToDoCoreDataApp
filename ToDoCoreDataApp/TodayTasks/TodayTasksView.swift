@@ -17,7 +17,7 @@ struct TodayTasksView: View {
         NavigationView {
             ScrollView {
                 
-                
+                ForEach(<#_#>)
                 
             } .background(
                 CustomBackground().ignoresSafeArea())
