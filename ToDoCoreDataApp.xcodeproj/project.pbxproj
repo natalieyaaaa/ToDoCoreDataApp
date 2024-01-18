@@ -81,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				204AEAA72B51D09800AD0059 /* CustomBackground.swift */,
+				204AEAAE2B52D31900AD0059 /* CustomButton.swift */,
 				204AEA932B51C5D100AD0059 /* Fonts */,
 			);
 			path = Design;
@@ -108,7 +109,6 @@
 			children = (
 				204AEAAA2B51E40C00AD0059 /* CustomAddTextField.swift */,
 				204AEAAC2B52AE0000AD0059 /* CustomDatePicker.swift */,
-				204AEAAE2B52D31900AD0059 /* CustomButton.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";

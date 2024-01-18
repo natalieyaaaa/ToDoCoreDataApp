@@ -22,8 +22,9 @@ struct TodayTasksView: View {
                         TaskView(task: task)
                     }
                 }
-            } .background(
+            }.background(
                 CustomBackground().ignoresSafeArea())
+            
     }
 }
 

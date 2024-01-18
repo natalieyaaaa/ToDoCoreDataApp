@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-var title = "Add Project"
-
 struct CustomButton: View {
+    
+    var title: String
+    
     var body: some View {
         
         Text(title)
@@ -25,5 +26,5 @@ struct CustomButton: View {
 }
 
 #Preview {
-    CustomButton()
+    CustomButton(title: "title")
 }

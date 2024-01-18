@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
         
     let all = CoreDataManager.shared.allEntities()
+    
     @State private var selection: Int = 1
 
     var body: some View {

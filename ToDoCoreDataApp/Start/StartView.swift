@@ -11,9 +11,14 @@ struct StartView: View {
     var body: some View {
         NavigationView {
             VStack {
-        }.background(
-            CustomBackground().ignoresSafeArea())
-    }
+                NavigationLink(destination: AddView()
+                        .navigationBarBackButtonHidden()
+                        .navigationBarHidden(true)){
+                    Text("Start")
+                }
+            }.background(
+                CustomBackground().ignoresSafeArea())
+        }.navigationViewStyle(.stack)
     }
 }
 
