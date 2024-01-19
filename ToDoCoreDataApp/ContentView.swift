@@ -8,24 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-        
+    
     let all = CoreDataManager.shared.allEntities()
     
-    @State private var selection: Int = 1
-
+    @State private var selection: Int = 0
+    @AppStorage("firstLaunch") var firstLaunch = true
+    
     var body: some View {
         
-        if all.isEmpty {
+        if firstLaunch {
             StartView()
         } else {
-            
             TabView(selection: $selection) {
                 
-              TodayTasksView()
-                .tabItem { Image(systemName: "list.bullet.clipboard") }
-                .tag(1)
-                .environmentObject(TaskModel())
-
+                TodayTasksView()
+                    .tabItem { Image(systemName: "list.bullet.clipboard") }
+                    .tag(1)
+                
                 AddView()
                     .tabItem { Image(systemName: "plus") }
                     .tag(2)

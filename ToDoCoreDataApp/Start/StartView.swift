@@ -11,9 +11,10 @@ struct StartView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: AddView()
-                        .navigationBarBackButtonHidden()
-                        .navigationBarHidden(true)){
+                
+                Button {
+                    UserDefaults.standard.set(false, forKey: "firstLaunch")
+                } label: {
                     Text("Start")
                 }
             }.background(

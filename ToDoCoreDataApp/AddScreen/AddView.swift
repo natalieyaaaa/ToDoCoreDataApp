@@ -11,77 +11,76 @@ struct AddView: View {
     
     @StateObject var avm = AddViewModel()
     
-    
     var body: some View {
-        
-        ZStack {
-            
-            VStack {
-                
-                HStack {
+        ScrollView {
+                VStack {
+                    HStack {
+                        
+                        Button {
+                            // back to start view dismiss
+                        } label: {
+                            Image("arrow.left")
+                                .renderingMode(.template)
+                                .foregroundColor(.customBlack)
+                        } .padding(.leading, 22)
+                        
+                        Spacer()
+                        
+                        Text("Add Project")
+                            .font(.lexenddeca(.semiBold, size: 23))
+                            .foregroundColor(Color.customBlack)
+                        
+                        Spacer()
+                        
+                        Button {
+                            // notification panel
+                        } label: {
+                            Image("notification")
+                                .renderingMode(.template)
+                                .foregroundColor(.customBlack)
+                        }.padding(.trailing, 22)
+                    }.onTapGesture {
+                        hideKeyboard()
+                    }
                     
-                    Button {
-                        // back to start view dismiss
-                    } label: {
-                        Image("arrow.left")
-                            .renderingMode(.template)
-                            .foregroundColor(.customBlack)
-                    } .padding(.leading, 22)
+                    CustomAddTextField(text: $avm.name, title: "Project name")
+                        .padding(.top, 40)
+                        .onTapGesture {
+                            hideKeyboard()
+                        }
+                    
+                    CustomAddTextField(text: $avm.notes, isNotes: true, title: "Description")
+                        .onTapGesture {
+                            hideKeyboard()
+                        }
+                    CustomDatePicker(date: $avm.startDate, title: "Start Date")
+                    
+                    CustomDatePicker(date: $avm.dueDate, title: "End Date")
                     
                     Spacer()
                     
-                    Text("Add Project")
-                        .font(.lexenddeca(.semiBold, size: 23))
-                        .foregroundColor(Color.customBlack)
-                    
-                    Spacer()
-                    
-                    Button {
-                        // notification panel
-                    } label: {
-                        Image("notification")
-                            .renderingMode(.template)
-                            .foregroundColor(.customBlack)
-                    }.padding(.trailing, 22)
-                }.onTapGesture {
-                    hideKeyboard()
+                    // зроби через онтапгестуре або інша логіка: воно баттон працювати не буде
                 }
-                
-                CustomAddTextField(text: $avm.name, title: "Project name")
-                    .padding(.top, 40)
+            .background(
+                CustomBackground().ignoresSafeArea()
                     .onTapGesture {
                         hideKeyboard()
                     }
-                
-                CustomAddTextField(text: $avm.notes, isNotes: true, title: "Description")
-                    .onTapGesture {
-                        hideKeyboard()
-                    }
-                CustomDatePicker(date: $avm.startDate, title: "Start Date")
-                
-                CustomDatePicker(date: $avm.dueDate, title: "End Date")
-                
-                Spacer()
-                
-                NavigationLink {
-                    TodayTasksView()
-                    
-                } label : {
-//                    Button {
-//                        avm.addProjectButton()
-//                    } label: {
+            )
+        }.ignoresSafeArea(.keyboard)
+            .overlay {
+                VStack {
+                    Spacer()
+                    Button {
+                        avm.addProjectButton()
+                    } label: {
                         CustomButton(title: "Add Project")
                             .padding(.bottom, 20)
-//                    }
-                } // зроби через онтапгестуре або інша логіка: воно баттон працювати не буде
+                    }
+                }.ignoresSafeArea(.keyboard)
             }
-        }.background(
-            CustomBackground().ignoresSafeArea()
-                .onTapGesture {
-                    hideKeyboard()
-                }
-        )
-        .ignoresSafeArea(.keyboard)
+            .scrollDisabled(true)
+        
     }
     
 }

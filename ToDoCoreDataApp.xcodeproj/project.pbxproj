@@ -149,9 +149,9 @@
 		2060A79E2B518AC1000434E3 /* ToDoCoreDataApp */ = {
 			isa = PBXGroup;
 			children = (
+				2060A7A12B518AC1000434E3 /* ContentView.swift */,
 				204AEAB52B52EE2C00AD0059 /* Start */,
 				204AEAB22B52EB2B00AD0059 /* TodayTasks */,
-				2060A7A12B518AC1000434E3 /* ContentView.swift */,
 				204AEAA62B51C63600AD0059 /* Info.plist */,
 				204AEA902B51BE9500AD0059 /* Design */,
 				2060A7AE2B518C33000434E3 /* AddScreen */,

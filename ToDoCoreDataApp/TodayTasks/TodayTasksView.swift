@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TodayTasksView: View {
-    
-    @EnvironmentObject var tm: TaskModel
+
+    @StateObject var tm = TaskModel()
     
     var body: some View {
             VStack {
@@ -17,18 +17,26 @@ struct TodayTasksView: View {
                     .font(.lexenddeca(.bold, size: 25))
                     .foregroundStyle(.customBlack)
                 
-                ScrollView {
-                    ForEach(tm.tasks, id: \.self) { task in
-                        TaskView(task: task)
+                if tm.tasks.isEmpty {
+                    Spacer()
+                    Text("No tasks yet")
+                    Spacer()
+                } else {
+                    ScrollView {
+                        ForEach(tm.tasks, id: \.self) { task in
+                            TaskView(task: task)
+                        }
                     }
                 }
             }.background(
                 CustomBackground().ignoresSafeArea())
-            
+            .onAppear {
+                tm.getEntities()
+            }
     }
 }
 
 #Preview {
     TodayTasksView()
-        .environmentObject(TaskModel())
+//        .environmentObject(TaskModel())
 }
