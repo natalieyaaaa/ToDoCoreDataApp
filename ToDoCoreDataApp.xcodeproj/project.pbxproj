@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2031BEB52B55D963008F668E /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031BEB42B55D963008F668E /* TaskModel.swift */; };
 		2031BEB72B56E390008F668E /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031BEB62B56E390008F668E /* TaskView.swift */; };
+		2031BEBB2B5AA9FA008F668E /* StartBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031BEBA2B5AA9FA008F668E /* StartBackground.swift */; };
 		204AEA922B51BEC000AD0059 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204AEA912B51BEC000AD0059 /* FontManager.swift */; };
 		204AEA9D2B51C5F700AD0059 /* LexendDeca-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204AEA942B51C5F700AD0059 /* LexendDeca-Medium.ttf */; };
 		204AEA9E2B51C5F700AD0059 /* LexendDeca-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204AEA952B51C5F700AD0059 /* LexendDeca-Black.ttf */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		2031BEB42B55D963008F668E /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		2031BEB62B56E390008F668E /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		2031BEBA2B5AA9FA008F668E /* StartBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBackground.swift; sourceTree = "<group>"; };
 		204AEA912B51BEC000AD0059 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		204AEA942B51C5F700AD0059 /* LexendDeca-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Medium.ttf"; sourceTree = "<group>"; };
 		204AEA952B51C5F700AD0059 /* LexendDeca-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Black.ttf"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				204AEAB62B52EE3D00AD0059 /* StartView.swift */,
+				2031BEBA2B5AA9FA008F668E /* StartBackground.swift */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				2060A7B32B518CD3000434E3 /* CoreDataManager.swift in Sources */,
 				2060A7A02B518AC1000434E3 /* ToDoCoreDataAppApp.swift in Sources */,
 				204AEAAD2B52AE0000AD0059 /* CustomDatePicker.swift in Sources */,
+				2031BEBB2B5AA9FA008F668E /* StartBackground.swift in Sources */,
 				204AEAB42B52EB5D00AD0059 /* TodayTasksView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
