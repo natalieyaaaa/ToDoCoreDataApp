@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var selection: Int = 0
     @AppStorage("firstLaunch") var firstLaunch = true
     
-    @EnvironmentObject var vm: MainViewModel
+    @StateObject var vm = MainViewModel()
     
     var body: some View {
         VStack {
@@ -22,14 +22,13 @@ struct ContentView: View {
                 TabView(selection: $selection) {
                     
                     TodayTasksView()
-                        .environmentObject(MainViewModel())
+                        .environmentObject(vm)
                         .tabItem { Image(systemName: "list.bullet.clipboard") }
                         .tag(1)
                     
                     AddView()
                         .tabItem { Image(systemName: "plus") }
                         .tag(2)
-                        .environmentObject(AddViewModel())
                 }
             }
         } 

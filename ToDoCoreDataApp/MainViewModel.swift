@@ -27,8 +27,8 @@ class MainViewModel: ObservableObject {
     }
     
     func getTodayTasks() {
-        guard !tasks.isEmpty else {print("tasks are empty"); return}
         todayTasks.removeAll()
+        guard !tasks.isEmpty else {print("tasks are empty"); return}
         for task in tasks {
             if Calendar.current.isDateInToday(task.dueDate!) {
                 guard !todayTasks.contains(task) else {return}

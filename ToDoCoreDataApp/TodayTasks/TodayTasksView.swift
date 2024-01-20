@@ -25,14 +25,14 @@ struct TodayTasksView: View {
                 
             } else {
                 ScrollView {
-                    ForEach(vm.todayTasks, id: \.self) { task in
+                    ForEach(vm.todayTasks, id: \.id) { task in
                         TaskView(task: task)
-                            .environmentObject(MainViewModel())
                     }
                 }
             }
         }.background(
             CustomBackground().ignoresSafeArea())
+        .animation(.easeInOut, value: vm.todayTasks)
         .onAppear {
             vm.getData()
         }

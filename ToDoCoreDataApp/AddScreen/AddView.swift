@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddView: View {
     
-    @EnvironmentObject var avm: AddViewModel
+    @StateObject var avm = AddViewModel()
     
     var body: some View {
         ScrollView {
