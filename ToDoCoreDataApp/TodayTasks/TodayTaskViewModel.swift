@@ -11,7 +11,7 @@ import CoreData
 class TodayTaskViewModel: ObservableObject {
     
     var coreData = CoreDataManager.shared
-    var mainModel = MainVewModel.shared
+    var mainModel = MainViewModel.shared
     
 //    @Published var todayTasks = [Task]()
     

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddView: View {
     
-    @StateObject var avm = AddViewModel()
+    @EnvironmentObject var avm: AddViewModel
     
     var body: some View {
         ScrollView {
@@ -87,6 +87,7 @@ struct AddView: View {
 
 #Preview {
     AddView()
+        .environmentObject(AddViewModel())
 }
 
 func hideKeyboard() {

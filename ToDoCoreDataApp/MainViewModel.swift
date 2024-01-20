@@ -8,26 +8,27 @@
 import Foundation
 import CoreData
 
-class MainVewModel: ObservableObject {
+class MainViewModel: ObservableObject {
     
-    static var shared = MainVewModel()
+    static var shared = MainViewModel()
     
     var coreData = CoreDataManager.shared
     
     @Published var tasks = [Task]()
     @Published var todayTasks = [Task]()
     
-    
     init(){
-        getEntities()
+        getData()
         //        getTodayTasks()
     }
-    func getEntities(){
+    func getData(){
         tasks = coreData.allEntities()
+        getTodayTasks()
     }
     
     func getTodayTasks() {
         guard !tasks.isEmpty else {print("tasks are empty"); return}
+        todayTasks.removeAll()
         for task in tasks {
             if Calendar.current.isDateInToday(task.dueDate!) {
                 guard !todayTasks.contains(task) else {return}
@@ -38,6 +39,6 @@ class MainVewModel: ObservableObject {
     
     func deleteButton(task: Task) {
         coreData.deleteEntity(entity: task)
-        getEntities()
+        getData()
     }
 }

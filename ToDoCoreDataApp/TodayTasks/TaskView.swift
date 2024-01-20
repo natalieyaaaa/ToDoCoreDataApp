@@ -12,8 +12,7 @@ struct TaskView: View {
     var task: Task
     @State var isChecked = false
     
-    @StateObject var coreData = CoreDataManager.shared
-    @StateObject var mm = MainVewModel()
+    @EnvironmentObject var mm: MainViewModel
     
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -27,7 +26,7 @@ struct TaskView: View {
                         
                         Image(systemName: "list.bullet.clipboard")
                             .foregroundStyle(.customBlack)
-                        Text(task.name!)
+                        Text(task.name ?? "")
                             .font(.lexenddeca(.semiBold, size: 16))
                             .foregroundStyle(.customBlack)
                         
@@ -38,7 +37,7 @@ struct TaskView: View {
                             .font(.lexenddeca(.light, size: 13))
                             .foregroundStyle(.greySecondary)
                         
-                        Text(dateFormatter.string(from: task.dueDate!))
+                        Text(dateFormatter.string(from: task.dueDate ?? Date.now))
                             .font(.lexenddeca(.light, size: 13))
                             .foregroundStyle(.customBlack)
                             .padding(10)
@@ -84,4 +83,5 @@ struct TaskView: View {
 
 #Preview {
     TaskView(task: Task.example)
+        .environmentObject(MainViewModel())
 }

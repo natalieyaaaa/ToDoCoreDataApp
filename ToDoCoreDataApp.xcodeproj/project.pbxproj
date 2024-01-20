@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2031BEB52B55D963008F668E /* MainVewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031BEB42B55D963008F668E /* MainVewModel.swift */; };
+		2031BEB52B55D963008F668E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031BEB42B55D963008F668E /* MainViewModel.swift */; };
 		2031BEB72B56E390008F668E /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031BEB62B56E390008F668E /* TaskView.swift */; };
 		2031BEBB2B5AA9FA008F668E /* StartBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031BEBA2B5AA9FA008F668E /* StartBackground.swift */; };
 		20328BC52B5B9C6E00B3D588 /* EmptyTodaysTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20328BC42B5B9C6E00B3D588 /* EmptyTodaysTasksView.swift */; };
@@ -40,7 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2031BEB42B55D963008F668E /* MainVewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVewModel.swift; sourceTree = "<group>"; };
+		2031BEB42B55D963008F668E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		2031BEB62B56E390008F668E /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		2031BEBA2B5AA9FA008F668E /* StartBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBackground.swift; sourceTree = "<group>"; };
 		20328BC42B5B9C6E00B3D588 /* EmptyTodaysTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTodaysTasksView.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				2060A7A12B518AC1000434E3 /* ContentView.swift */,
-				2031BEB42B55D963008F668E /* MainVewModel.swift */,
+				2031BEB42B55D963008F668E /* MainViewModel.swift */,
 				204AEAB52B52EE2C00AD0059 /* Start */,
 				204AEAB22B52EB2B00AD0059 /* TodayTasks */,
 				204AEAA62B51C63600AD0059 /* Info.plist */,
@@ -292,7 +292,7 @@
 				204AEAA82B51D09800AD0059 /* CustomBackground.swift in Sources */,
 				2060A7A22B518AC1000434E3 /* ContentView.swift in Sources */,
 				204AEAB72B52EE3D00AD0059 /* StartView.swift in Sources */,
-				2031BEB52B55D963008F668E /* MainVewModel.swift in Sources */,
+				2031BEB52B55D963008F668E /* MainViewModel.swift in Sources */,
 				204AEAAF2B52D31900AD0059 /* CustomButton.swift in Sources */,
 				204AEA922B51BEC000AD0059 /* FontManager.swift in Sources */,
 				2060A7B52B518FC8000434E3 /* AddView.swift in Sources */,

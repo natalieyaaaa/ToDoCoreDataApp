@@ -9,10 +9,8 @@ import SwiftUI
 
 struct TodayTasksView: View {
     
-    @StateObject var vm = MainVewModel()
-//    @State var toRefresh = false
+    @EnvironmentObject var vm: MainViewModel
     
-    //    @StateObject var mm = MainVewModel()
     var body: some View {
         VStack {
             Text("Today's Tasks")
@@ -29,17 +27,19 @@ struct TodayTasksView: View {
                 ScrollView {
                     ForEach(vm.todayTasks, id: \.self) { task in
                         TaskView(task: task)
+                            .environmentObject(MainViewModel())
                     }
                 }
             }
         }.background(
             CustomBackground().ignoresSafeArea())
         .onAppear {
-            vm.getTodayTasks()
+            vm.getData()
         }
     }
 }
 
 #Preview {
     TodayTasksView()
+        .environmentObject(MainViewModel())
 }
