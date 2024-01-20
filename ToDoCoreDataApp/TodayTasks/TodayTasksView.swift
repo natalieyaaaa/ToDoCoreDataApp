@@ -17,13 +17,15 @@ struct TodayTasksView: View {
                     .font(.lexenddeca(.bold, size: 25))
                     .foregroundStyle(.customBlack)
                 
-                if tm.tasks.isEmpty {
+                if tm.todayTasks.isEmpty {
+                    
                     Spacer()
-                    Text("No tasks yet")
+                    EmptyTodaysTasksView()
                     Spacer()
+                    
                 } else {
                     ScrollView {
-                        ForEach(tm.tasks, id: \.self) { task in
+                        ForEach(tm.todayTasks, id: \.self) { task in
                             TaskView(task: task)
                         }
                     }

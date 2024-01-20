@@ -10,6 +10,9 @@
 		2031BEB52B55D963008F668E /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031BEB42B55D963008F668E /* TaskModel.swift */; };
 		2031BEB72B56E390008F668E /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031BEB62B56E390008F668E /* TaskView.swift */; };
 		2031BEBB2B5AA9FA008F668E /* StartBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031BEBA2B5AA9FA008F668E /* StartBackground.swift */; };
+		20328BC52B5B9C6E00B3D588 /* EmptyTodaysTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20328BC42B5B9C6E00B3D588 /* EmptyTodaysTasksView.swift */; };
+		20328BC72B5B9F8C00B3D588 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20328BC62B5B9F8C00B3D588 /* CustomTabBar.swift */; };
+		20328BC92B5BA90500B3D588 /* TodayTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20328BC82B5BA90500B3D588 /* TodayTaskViewModel.swift */; };
 		204AEA922B51BEC000AD0059 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204AEA912B51BEC000AD0059 /* FontManager.swift */; };
 		204AEA9D2B51C5F700AD0059 /* LexendDeca-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204AEA942B51C5F700AD0059 /* LexendDeca-Medium.ttf */; };
 		204AEA9E2B51C5F700AD0059 /* LexendDeca-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204AEA952B51C5F700AD0059 /* LexendDeca-Black.ttf */; };
@@ -40,6 +43,9 @@
 		2031BEB42B55D963008F668E /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		2031BEB62B56E390008F668E /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		2031BEBA2B5AA9FA008F668E /* StartBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBackground.swift; sourceTree = "<group>"; };
+		20328BC42B5B9C6E00B3D588 /* EmptyTodaysTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTodaysTasksView.swift; sourceTree = "<group>"; };
+		20328BC62B5B9F8C00B3D588 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		20328BC82B5BA90500B3D588 /* TodayTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTaskViewModel.swift; sourceTree = "<group>"; };
 		204AEA912B51BEC000AD0059 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		204AEA942B51C5F700AD0059 /* LexendDeca-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Medium.ttf"; sourceTree = "<group>"; };
 		204AEA952B51C5F700AD0059 /* LexendDeca-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Black.ttf"; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 			children = (
 				204AEAA72B51D09800AD0059 /* CustomBackground.swift */,
 				204AEAAE2B52D31900AD0059 /* CustomButton.swift */,
+				20328BC62B5B9F8C00B3D588 /* CustomTabBar.swift */,
 				204AEA932B51C5D100AD0059 /* Fonts */,
 			);
 			path = Design;
@@ -119,7 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				204AEAB32B52EB5D00AD0059 /* TodayTasksView.swift */,
+				20328BC82B5BA90500B3D588 /* TodayTaskViewModel.swift */,
 				2031BEB62B56E390008F668E /* TaskView.swift */,
+				20328BC42B5B9C6E00B3D588 /* EmptyTodaysTasksView.swift */,
 			);
 			path = TodayTasks;
 			sourceTree = "<group>";
@@ -273,9 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20328BC92B5BA90500B3D588 /* TodayTaskViewModel.swift in Sources */,
+				20328BC52B5B9C6E00B3D588 /* EmptyTodaysTasksView.swift in Sources */,
 				204AEAB12B52D68B00AD0059 /* AddViewModel.swift in Sources */,
 				204AEAAB2B51E40C00AD0059 /* CustomAddTextField.swift in Sources */,
 				2060A7B12B518C79000434E3 /* Tasks.xcdatamodeld in Sources */,
+				20328BC72B5B9F8C00B3D588 /* CustomTabBar.swift in Sources */,
 				2031BEB72B56E390008F668E /* TaskView.swift in Sources */,
 				204AEAA82B51D09800AD0059 /* CustomBackground.swift in Sources */,
 				2060A7A22B518AC1000434E3 /* ContentView.swift in Sources */,
