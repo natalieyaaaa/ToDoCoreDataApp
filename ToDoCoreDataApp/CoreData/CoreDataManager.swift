@@ -38,13 +38,20 @@ class CoreDataManager: ObservableObject {
         entity.notes = notes
         entity.dueDate = dueDate
         entity.startDate = startDate
+//        entity.isDone = isDone
         
-        updateEntity()
+        do {
+            try persistentContainer.viewContext.save()
+        } catch let error {
+            persistentContainer.viewContext.rollback()
+            print("Error saving CoreData entity: \(error.localizedDescription)")
+        }
     }
         
         func deleteEntity(entity: Task) {
             persistentContainer.viewContext.delete(entity)
             updateEntity()
+            print("entity deleted")
         }
         
         func allEntities() -> [Task] {

@@ -10,7 +10,10 @@ import SwiftUI
 struct TaskView: View {
     
     var task: Task
-    @State var isDone = false
+    @State var isChecked = false
+    
+    @StateObject var coreData = CoreDataManager.shared
+    @StateObject var mm = MainVewModel()
     
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -41,16 +44,22 @@ struct TaskView: View {
                             .padding(10)
                             .background(RoundedRectangle(cornerRadius: 15)
                                 .foregroundStyle(.customPurple.opacity(0.2)))
+                        
+                        Button {
+                            mm.deleteButton(task: task)
+                        } label: {
+                            Image(systemName: "trash")
+                        }
                     }
                 }
                 
                 Spacer()
                 
                 Button {
-                    //done -> green checkmark
-                    isDone.toggle()
+                    isChecked.toggle()
+                    
                 } label: {
-                    if isDone == true {
+                    if isChecked == true {
                         Image(systemName: "checkmark.circle")
                             .font(.title3)
                             .foregroundStyle(.green)

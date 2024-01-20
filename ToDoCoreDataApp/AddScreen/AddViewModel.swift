@@ -14,11 +14,12 @@ class AddViewModel: ObservableObject {
     @Published var notes = ""
     @Published var startDate = Date()
     @Published var dueDate = Date()
+//    @Published var isDone = false
     
     func addProjectButton() {
         guard name != "", notes != "" else {return}
         CoreDataManager.shared.saveEntity(name: name, notes: notes, dueDate: dueDate, startDate: startDate)
-        print("saved")
+        print("project saved")
     }
 }
 

@@ -11,11 +11,23 @@ import CoreData
 class TodayTaskViewModel: ObservableObject {
     
     var coreData = CoreDataManager.shared
-//    var allTasks = TaskModel.tasks
+    var mainModel = MainVewModel.shared
     
-    var todayTasks = [Task]()
+//    @Published var todayTasks = [Task]()
     
-    static func getTodayTasks() {
-//        let allTasks = 
-    }
+//    init() {
+//        getTodayTasks()
+//    }
+    
+//    func getTodayTasks() {
+//        for task in mainModel.tasks {
+//            if Calendar.current.isDateInToday(task.dueDate!) {
+//                todayTasks.append(task)
+//            }
+//        }
+//    }
+    
+//    func doneButton() {
+//        
+//    }
 }
