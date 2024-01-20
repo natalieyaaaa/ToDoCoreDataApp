@@ -10,7 +10,7 @@ import SwiftUI
 struct TodayTasksView: View {
     
     @EnvironmentObject var vm: MainViewModel
-    
+        
     var body: some View {
         VStack {
             Text("Today's Tasks")

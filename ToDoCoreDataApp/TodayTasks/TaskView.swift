@@ -10,9 +10,10 @@ import SwiftUI
 struct TaskView: View {
     
     var task: Task
+    
     @State var isChecked = false
     
-    @EnvironmentObject var mm: MainViewModel
+    @EnvironmentObject var vm: MainViewModel
     
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -45,9 +46,10 @@ struct TaskView: View {
                                 .foregroundStyle(.customPurple.opacity(0.2)))
                         
                         Button {
-                            mm.deleteButton(task: task)
+                                vm.deleteButton(task: task)
                         } label: {
                             Image(systemName: "trash")
+                                .foregroundStyle(.greySecondary)
                         }
                     }
                 }
@@ -77,8 +79,7 @@ struct TaskView: View {
                     .foregroundStyle(.customPurple.opacity(0.1))
                     .shadow(radius: 7)
                 ).padding(.bottom, 15)
-
-    }
+    } 
 }
 
 #Preview {
