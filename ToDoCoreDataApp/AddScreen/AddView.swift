@@ -58,8 +58,7 @@ struct AddView: View {
                     CustomDatePicker(date: $avm.dueDate, title: "End Date")
                     
                     Spacer()
-                    
-                    // зроби через онтапгестуре або інша логіка: воно баттон працювати не буде
+        
                 }
             .background(
                 CustomBackground().ignoresSafeArea()
@@ -88,8 +87,4 @@ struct AddView: View {
 #Preview {
     AddView()
         .environmentObject(AddViewModel())
-}
-
-func hideKeyboard() {
-    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
 }

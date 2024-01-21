@@ -17,7 +17,24 @@ struct TodayTasksView: View {
                 .font(.lexenddeca(.bold, size: 25))
                 .foregroundStyle(.customBlack)
             
-            if vm.todayTasks.isEmpty {
+            DatePicker("", selection: $vm.date, displayedComponents: .date)
+                .padding(.trailing, 140)
+            
+//            ScrollView(.vertical) {
+//                LazyHStack {
+//                    
+//                    Button {
+//                        
+//                    } label: {
+//                        CustomPickTaskDate(month: "Jan", day: "22", weekday: "Mon")
+//                    }
+//                }
+//            } .frame(height: 140)
+//            
+            Divider().frame(width: 300)
+            Spacer().frame(height: 20)
+            
+            if vm.filteredTasks.isEmpty {
                 
                 Spacer()
                 EmptyTodaysTasksView()
@@ -25,17 +42,19 @@ struct TodayTasksView: View {
                 
             } else {
                 ScrollView {
-                    ForEach(vm.todayTasks, id: \.id) { task in
+                    ForEach(vm.filteredTasks, id: \.id) { task in
                         TaskView(task: task)
                     }
                 }
             }
         }.background(
             CustomBackground().ignoresSafeArea())
-        .animation(.easeInOut, value: vm.todayTasks)
+        .animation(.easeInOut, value: vm.filteredTasks)
+
         .onAppear {
             vm.getData()
         }
+        .onChange(of: vm.date, vm.getFilteredTasks)
     }
 }
 

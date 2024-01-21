@@ -15,26 +15,23 @@ class MainViewModel: ObservableObject {
     var coreData = CoreDataManager.shared
     
     @Published var tasks = [Task]()
-    @Published var todayTasks = [Task]()
+    @Published var filteredTasks = [Task]()
+
+    let calendar = Calendar.current
+    @Published var date = Date()
     
     init(){
         getData()
-        //        getTodayTasks()
     }
     func getData(){
         tasks = coreData.allEntities()
-        getTodayTasks()
+        getFilteredTasks()
     }
     
-    func getTodayTasks() {
-        todayTasks.removeAll()
+    func getFilteredTasks() {
+        filteredTasks.removeAll()
         guard !tasks.isEmpty else {print("tasks are empty"); return}
-        for task in tasks {
-            if Calendar.current.isDateInToday(task.dueDate!) {
-                guard !todayTasks.contains(task) else {return}
-                todayTasks.append(task)
-            }
-        }
+        filteredTasks = tasks.filter { Calendar.current.compare($0.dueDate!, to: date, toGranularity: .day) == .orderedSame}
     }
     
     func deleteButton(task: Task) {
@@ -42,3 +39,5 @@ class MainViewModel: ObservableObject {
         getData()
     }
 }
+
+

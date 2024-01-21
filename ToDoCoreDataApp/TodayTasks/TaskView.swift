@@ -79,7 +79,7 @@ struct TaskView: View {
                     .foregroundStyle(.customPurple.opacity(0.1))
                     .shadow(radius: 7)
                 ).padding(.bottom, 15)
-    } 
+    }
 }
 
 #Preview {

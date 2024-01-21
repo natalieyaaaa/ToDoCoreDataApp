@@ -30,6 +30,8 @@
 		204AEAB12B52D68B00AD0059 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204AEAB02B52D68B00AD0059 /* AddViewModel.swift */; };
 		204AEAB42B52EB5D00AD0059 /* TodayTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204AEAB32B52EB5D00AD0059 /* TodayTasksView.swift */; };
 		204AEAB72B52EE3D00AD0059 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204AEAB62B52EE3D00AD0059 /* StartView.swift */; };
+		2057D4BC2B5D4E07003B0109 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057D4BB2B5D4E07003B0109 /* Extensions.swift */; };
+		2057D4C02B5D6298003B0109 /* CustomPickTaskDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057D4BF2B5D6298003B0109 /* CustomPickTaskDate.swift */; };
 		2060A7A02B518AC1000434E3 /* ToDoCoreDataAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2060A79F2B518AC1000434E3 /* ToDoCoreDataAppApp.swift */; };
 		2060A7A22B518AC1000434E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2060A7A12B518AC1000434E3 /* ContentView.swift */; };
 		2060A7A42B518AC3000434E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2060A7A32B518AC3000434E3 /* Assets.xcassets */; };
@@ -64,6 +66,8 @@
 		204AEAB02B52D68B00AD0059 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 		204AEAB32B52EB5D00AD0059 /* TodayTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTasksView.swift; sourceTree = "<group>"; };
 		204AEAB62B52EE3D00AD0059 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		2057D4BB2B5D4E07003B0109 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2057D4BF2B5D6298003B0109 /* CustomPickTaskDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickTaskDate.swift; sourceTree = "<group>"; };
 		2060A79C2B518AC1000434E3 /* ToDoCoreDataApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoCoreDataApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2060A79F2B518AC1000434E3 /* ToDoCoreDataAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCoreDataAppApp.swift; sourceTree = "<group>"; };
 		2060A7A12B518AC1000434E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 				20328BC82B5BA90500B3D588 /* TodayTaskViewModel.swift */,
 				2031BEB62B56E390008F668E /* TaskView.swift */,
 				20328BC42B5B9C6E00B3D588 /* EmptyTodaysTasksView.swift */,
+				2057D4BF2B5D6298003B0109 /* CustomPickTaskDate.swift */,
 			);
 			path = TodayTasks;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 		2060A79E2B518AC1000434E3 /* ToDoCoreDataApp */ = {
 			isa = PBXGroup;
 			children = (
+				2057D4BB2B5D4E07003B0109 /* Extensions.swift */,
 				2060A7A12B518AC1000434E3 /* ContentView.swift */,
 				2031BEB42B55D963008F668E /* MainViewModel.swift */,
 				204AEAB52B52EE2C00AD0059 /* Start */,
@@ -282,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2057D4C02B5D6298003B0109 /* CustomPickTaskDate.swift in Sources */,
 				20328BC92B5BA90500B3D588 /* TodayTaskViewModel.swift in Sources */,
 				20328BC52B5B9C6E00B3D588 /* EmptyTodaysTasksView.swift in Sources */,
 				204AEAB12B52D68B00AD0059 /* AddViewModel.swift in Sources */,
@@ -297,6 +304,7 @@
 				204AEA922B51BEC000AD0059 /* FontManager.swift in Sources */,
 				2060A7B52B518FC8000434E3 /* AddView.swift in Sources */,
 				2060A7B32B518CD3000434E3 /* CoreDataManager.swift in Sources */,
+				2057D4BC2B5D4E07003B0109 /* Extensions.swift in Sources */,
 				2060A7A02B518AC1000434E3 /* ToDoCoreDataAppApp.swift in Sources */,
 				204AEAAD2B52AE0000AD0059 /* CustomDatePicker.swift in Sources */,
 				2031BEBB2B5AA9FA008F668E /* StartBackground.swift in Sources */,
