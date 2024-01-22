@@ -32,13 +32,13 @@ class CoreDataManager: ObservableObject {
     }
     
     // edit the function according to your entity attributes
-    func saveEntity(name: String, notes: String, dueDate: Date, startDate: Date) {
+    func saveEntity(name: String, notes: String, dueDate: Date, startDate: Date, status: String) {
         let entity = Task(context: persistentContainer.viewContext)
         entity.name = name
         entity.notes = notes
         entity.dueDate = dueDate
         entity.startDate = startDate
-//        entity.isDone = isDone
+        entity.status = status
         
         do {
             try persistentContainer.viewContext.save()

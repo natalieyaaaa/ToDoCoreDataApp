@@ -19,19 +19,25 @@ struct ContentView: View {
             if firstLaunch {
                 StartView()
             } else {
+                
                 TabView(selection: $selection) {
                     
                     TodayTasksView()
                         .environmentObject(vm)
-                        .tabItem { Image(systemName: "list.bullet.clipboard") }
+                        .tabItem { Image(systemName: "list.bullet.clipboard")
+                                .renderingMode(.template)
+                        }
                         .tag(1)
                     
                     AddView()
-                        .tabItem { Image(systemName: "plus") }
+                        .tabItem { Image(systemName: "plus")
+                            .renderingMode(.template)}
                         .tag(2)
-                }
+                    
+                }.accentColor(.customPurple)
+                
             }
-        } 
+        }
     }
 }
 

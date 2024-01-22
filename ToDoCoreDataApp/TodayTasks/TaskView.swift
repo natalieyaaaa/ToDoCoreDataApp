@@ -71,14 +71,25 @@ struct TaskView: View {
                     }
                 }
                 
-            } .padding()
+            } .overlay {
+                RoundedRectangle(cornerRadius: 20)
+                    .frame(width: 360, height: 110)
+                    .foregroundStyle(.black.opacity(isChecked ? 0.15 : 0))
+            }
+            .padding()
                 .frame(width: 350)
                 .frame(maxWidth: 600)
                 .background(RoundedRectangle(cornerRadius: 20)
                     .frame(width: 360)
                     .foregroundStyle(.customPurple.opacity(0.1))
                     .shadow(radius: 7)
-                ).padding(.bottom, 15)
+                )
+                .padding(.bottom, 15)
+                .onTapGesture {
+                    if isChecked {
+                        isChecked = false
+                    }
+                } .animation(.easeInOut, value: isChecked)
     }
 }
 

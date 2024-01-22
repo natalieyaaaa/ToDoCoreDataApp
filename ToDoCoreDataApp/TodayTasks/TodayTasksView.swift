@@ -16,9 +16,19 @@ struct TodayTasksView: View {
             Text("Today's Tasks")
                 .font(.lexenddeca(.bold, size: 25))
                 .foregroundStyle(.customBlack)
+                .frame(height: 30)
             
-            DatePicker("", selection: $vm.date, displayedComponents: .date)
-                .padding(.trailing, 140)
+            Divider().frame(width: 300, height: 1)
+
+            HStack {
+                DatePicker("", selection: $vm.date, displayedComponents: .date)
+                    .frame(width: 150)
+                    .overlay(alignment: .leading) {
+                        Image("calendar")
+                    }
+            }.padding(.trailing)
+                .padding(.top, 5)
+                .datePickerStyle(.compact)
             
 //            ScrollView(.vertical) {
 //                LazyHStack {
@@ -30,8 +40,7 @@ struct TodayTasksView: View {
 //                    }
 //                }
 //            } .frame(height: 140)
-//            
-            Divider().frame(width: 300)
+            
             Spacer().frame(height: 20)
             
             if vm.filteredTasks.isEmpty {
