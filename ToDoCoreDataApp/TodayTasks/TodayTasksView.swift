@@ -53,6 +53,7 @@ struct TodayTasksView: View {
                 ScrollView {
                     ForEach(vm.filteredTasks, id: \.id) { task in
                         TaskView(task: task)
+                            .environmentObject(vm)
                     }
                 }
             }

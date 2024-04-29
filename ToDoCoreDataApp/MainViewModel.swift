@@ -31,7 +31,7 @@ class MainViewModel: ObservableObject {
     func getFilteredTasks() {
         filteredTasks.removeAll()
         guard !tasks.isEmpty else {print("tasks are empty"); return}
-        filteredTasks = tasks.filter { Calendar.current.compare($0.dueDate!, to: date, toGranularity: .day) == .orderedSame}
+        filteredTasks = tasks.filter { Calendar.current.compare($0.toDoDate!, to: date, toGranularity: .day) == .orderedSame}
     }
     
     func deleteButton(task: Task) {

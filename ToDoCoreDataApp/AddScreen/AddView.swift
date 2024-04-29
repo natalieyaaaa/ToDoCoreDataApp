@@ -11,13 +11,14 @@ struct AddView: View {
     
     @StateObject var avm = AddViewModel()
     
+    @Binding var selection: Int
     var body: some View {
         ScrollView {
                 VStack {
                     HStack {
                         
                         Button {
-                            // back to start view dismiss
+                            selection = 1
                         } label: {
                             Image("arrow.left")
                                 .renderingMode(.template)
@@ -53,9 +54,8 @@ struct AddView: View {
                         .onTapGesture {
                             hideKeyboard()
                         }
-                    CustomDatePicker(date: $avm.startDate, title: "Start Date")
                     
-                    CustomDatePicker(date: $avm.dueDate, title: "End Date")
+                    CustomDatePicker(date: $avm.toDoDate, title: "Date")
                     
                     Spacer()
         
@@ -72,6 +72,7 @@ struct AddView: View {
                     Spacer()
                     Button {
                         avm.addProjectButton()
+                        selection = 1
                     } label: {
                         CustomButton(title: "Add Project")
                             .padding(.bottom, 20)
@@ -84,7 +85,7 @@ struct AddView: View {
     
 }
 
-#Preview {
-    AddView()
-        .environmentObject(AddViewModel())
-}
+//#Preview {
+//    AddView()
+//        .environmentObject(AddViewModel())
+//}

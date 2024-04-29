@@ -38,7 +38,7 @@ struct TaskView: View {
                             .font(.lexenddeca(.light, size: 13))
                             .foregroundStyle(.greySecondary)
                         
-                        Text(dateFormatter.string(from: task.dueDate ?? Date.now))
+                        Text(dateFormatter.string(from: task.toDoDate ?? Date.now))
                             .font(.lexenddeca(.light, size: 13))
                             .foregroundStyle(.customBlack)
                             .padding(10)

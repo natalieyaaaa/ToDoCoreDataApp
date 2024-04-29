@@ -29,7 +29,7 @@ struct ContentView: View {
                         }
                         .tag(1)
                     
-                    AddView()
+                    AddView(selection: $selection)
                         .tabItem { Image(systemName: "plus")
                             .renderingMode(.template)}
                         .tag(2)
